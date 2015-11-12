@@ -34,13 +34,43 @@ function palindrome(str) {
     return false;
     }
 }
-return palindrome("eye");
-return palindrome("race car");
-return palindrome("not a palindrome");
-return palindrome("A man, a plan, a canal. Panama");
-return palindrome("never odd or even");
-return palindrome("nope");
-return palindrome("almostomla");
-return palindrome("My age is 0, 0 si ega ym.");
-return palindrome("1 eye for of 1 eye.");
-return palindrome("0_0 (: /-\ :) 0-0");
+return palindrome("eye"); //should return true.
+return palindrome("race car"); //should return true.
+return palindrome("not a palindrome"); //should return false.
+return palindrome("A man, a plan, a canal. Panama"); //should return true.
+return palindrome("never odd or even"); //should return true.
+return palindrome("nope"); //should return false.
+return palindrome("almostomla"); //should return false.
+return palindrome("My age is 0, 0 si ega ym."); //should return true.
+return palindrome("1 eye for of 1 eye."); //should return false.
+return palindrome("0_0 (: /-\ :) 0-0"); //should return true.
+
+
+//Bonfire: Find the Longest Word in a String -- Return the length of the Longest word in the provided sentence. Your response should be a number.
+function findLongestWord(str) {
+    var lWord = str.split(" "); //turns string into an array divided by the spaces.
+    lWord.sort(function(a, b) {
+        return (b.length - a.length); //sorting the array by the length of each string from largest to smallest.
+    });
+    return (lWord[0].length); //returns the length of the string at index 0, which should be the longest.
+}
+findLongestWord("The quick brown fox jumped over the lazy dog"); //should return 6.
+findLongestWord("May the force be with you"); //should return 5.
+findLongestWord("Google do a barrel roll"); //should return 6.
+findLongestWord("What is the average airspeed velocity of an unladen swallow"); //should return 8.
+findLongestWord("What if we try a super-long word such as otorhinolaryngology"); //should return 19.
+
+
+//Bonfire: Title Case a Sentence -- Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is lower case. For the purpose of this exercise, you should also capitalize connecting words like "the" and "of."
+function titleCase(str) {
+    str = str.toLowerCase().split(" "); //setting string to lower case then making it an array
+        var string = str.map(function(val){ //iterates through the array while creating new values based on the function & creating a new array
+            val = val.charAt(0).toUpperCase() + val.slice(1); //charAt: selects index of a string, slice: cuts a string at the indicated index
+            return val;
+            });
+        var string1 = string.join(" "); //taking new array & putting it back as a string
+    return (string1);
+}
+titleCase("I'm a little tea pot");
+titleCase("sHoRt AnD sToUt");
+titleCase("HERE IS MY HANDLE HERE IS MY SPOUT");
