@@ -12,7 +12,9 @@
     $("#left-well").children().css("color", "green");
     $(".target:nth-child(2)").addClass("animated bounce"); // Targets the nth-element of the class or element
     $(".target:even").addClass("animated shake"); // Targets the even/odd of the class or element
-	$("body").addClass("animated hinge"); // Targets the body element: creates a hinge effect
+	  $("body").addClass("animated hinge"); // Targets the body element: creates a hinge effect
+    $("#target4").html("<i>#target4</i>"); //Adds HTML tags & text within an element & will override any existing content
+    $("#target4").text("Target 4"); //Alters text without adding HTML tags
   });
 </script>
 

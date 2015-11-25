@@ -151,3 +151,125 @@ truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A gre
 truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2); //"A-tisket a-tasket A green and yellow basket"
 truncate("A-", 1); //should return "A..."
 truncate("Absolutely Longer", 2); //should return "Ab..."
+
+
+//Bonfire: Chunky Monkey -- Write a function that splits an array (first argument) into groups the length of size (second argument) & returns them as a multi-dimensional array.
+//First Solution
+function chunk (arr, size) {
+  var array = [];
+  for (i=0; i < arr.length) {
+    array.push(arr.slice(i, i += size)); //Array Slice (x, y): x = start argument; y = end argument, *but does not include the v
+  }
+  return array;
+}
+chunk(["a", "b", "c", "d"], 2); //should return [["a", "b"], ["c", "d"]]
+chunk([0, 1, 2, 3, 4, 5], 3); //should return [[0, 1, 2], [3, 4, 5]]
+chunk([0, 1, 2, 3, 4, 5], 2); //should return [[0, 1], [2, 3], [4, 5]]
+chunk([0, 1, 2, 3, 4, 5], 4); //should return [[0, 1, 2, 3], [4, 5]]
+
+//Second Solution
+function chunk (arr, size) {
+  var array = [];
+      i = 0;
+      n = arr.length;
+  while (i < n) {
+    array.push(arr.slice(i, i += size));
+  }
+  return array;
+}
+chunk(["a", "b", "c", "d"], 2);
+chunk([0, 1, 2, 3, 4, 5], 3);
+chunk([0, 1, 2, 3, 4, 5], 2);
+chunk([0, 1, 2, 3, 4, 5], 4);
+
+
+//Bonfire: Slasher Flick -- Return the remaining elements of an array after chopping off n elements from the head. The head meaning the beginning of the array or the zeroth index.
+function slasher(arr, howMany) {
+    var array = arr.splice(0, howMany); //splice(): changes the content of the array by removing existing elements and/or adding new elements
+    return arr; //**splice returns an array containing the DELETED elements
+}
+slasher([1, 2, 3], 2); //should return [3]
+slasher([1, 2, 3], 0); //should return [1, 2, 3]
+slasher([1, 2, 3], 9); //should return []
+slasher([1, 2, 3], 4); //should return []
+
+
+//Bonfire: Mutations -- Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+function mutation(arr) {
+    for (i=0; i < arr[1].length; i++) {
+        var pos = arr[0].toLowerCase().indexOf(arr[1].toLowerCase().charAt(i)); //indexOf: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
+        if (pos == -1) {
+            return false;
+            break; //only looking for at least one false
+        }
+    } return true;
+}
+mutation(["hello", "hey"]); //should return false
+mutation(["hello", "Hello"]); //should return true
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]); //should return true
+mutation(["Mary", "Army"]); //should return true
+mutation(["Mary", "Aarmy"]); //should return true
+mutation(["Alien", "line"]); //should return true
+mutation(["floor", "for"]); //should return true
+mutation(["hello", "neo"]); //should return false
+
+
+//Bonfire: Falsy Bouncer -- Remove all falsy values from an array. Falsy values in JavaScript are false, null, 0, "", undefined and NaN.
+function bouncer(arr) {
+    var falsy = [false, null, 0, "", undefined, NaN]; //set falsy values to an array
+    var y = arr.filter(function(x) { //filtering through arrays fed through bouncer function
+        for(i = 0; i < falsy.length; i++) { //going through falsy array
+            if(x !== falsy[i]) {
+                return x;
+            }
+        }
+    });
+    return y;
+}
+bouncer([7, "ate", "", false, 9]); //should return [7, "ate", 9]
+bouncer(["a", "b", "c"]); //should return ["a", "b", "c"]
+bouncer([false, null, 0, NaN, undefined, ""]); //should return []
+
+
+//Bonfire: Seek and Destroy -- You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+function destroyer(arr) {
+    var array = arguments[0];
+    var compare = [];
+    for(i=1; i < arguments.length; i++) {
+        compare.push(arguments[i]);
+    }
+    Array.prototype.diff = function(a) { //get the difference between multiple arrays. Compares all values and returns array with the values that do not repeat.
+      return this.filter(function(i) { //http://stackoverflow.com/questions/1187518/javascript-array-difference
+        return a.indexOf(i) < 0;
+      });
+    };
+    var z = array.diff(compare);
+    return z;
+}
+destroyer([1, 2, 3, 1, 2, 3], 2, 3); //should return [1, 1]
+destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3); //should return [1, 5, 1]
+destroyer([3, 5, 1, 2, 2], 2, 3, 5); //should return [1]
+destroyer([2, 3, 2, 3], 2, 3); //should return []
+destroyer(["tree", "hamburger", 53], "tree", 53); //should return ["hamburger"]
+
+
+//Bonfire: Where Do I Belong? -- Retrun the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted.
+//For example, where([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
+//Likewise, where([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
+function where(arr, num) {
+    var array = arguments[0];
+    var newValue = arguments[1];
+    array.push(newValue);
+    var sorting = array.sort(function(a, b) {
+        return a-b;
+    });
+    for(var i=0; i < array.length && array[i] !== newValue; i++) {
+        }
+    return i;
+}
+where([10, 20, 30, 40, 50], 35); //should return 3
+where([10, 20, 30, 40, 50], 30); //should return 2
+where([40, 60], 50); //should return 1
+where([5, 3, 20, 3], 5); //should return 2
+where([2, 20, 10], 19); //should return 2
+where([2, 5, 10], 15); //should return 3
