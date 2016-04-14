@@ -1,0 +1,284 @@
+/*General*/
+
+body {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html{font-size: 75%}
+}
+
+@media (min-width: 992px) {
+  html{font-size: 85%}
+}
+
+@media (min-width: 1200px) {
+  html{
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 1920px) {
+  html{
+    font-size: 165%;
+  }
+}
+
+.pads {
+  padding: 30%;
+  margin: 0%;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right: -2px;
+}
+
+a:link {
+  color: black;
+}
+
+a:hover {
+  color: #339999;
+}
+
+a:visited {
+  color: #660099;
+}
+
+/*Navigation*/
+
+nav {
+  background-color: #339999;
+  margin: 0% -5% 0% -5%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative
+}
+
+nav ul li {
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 235%;
+  display: inline-block;
+  text-align: center;
+  margin-left: 10%;
+}
+
+nav a {
+  color: black;
+}
+
+nav a:hover {
+  color: #FF9933;
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: #660099;
+  text-decoration: none;
+}
+
+
+/*Section 1*/
+
+#backgroundOne {
+  background: rgba(226,226,226,1);
+background: -moz-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 8%, rgba(209,209,209,1) 31%, rgba(254,254,254,1) 56%, rgba(254,254,254,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(8%, rgba(219,219,219,1)), color-stop(31%, rgba(209,209,209,1)), color-stop(56%, rgba(254,254,254,1)), color-stop(100%, rgba(254,254,254,1)));
+background: -webkit-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 8%, rgba(209,209,209,1) 31%, rgba(254,254,254,1) 56%, rgba(254,254,254,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 8%, rgba(209,209,209,1) 31%, rgba(254,254,254,1) 56%, rgba(254,254,254,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 8%, rgba(209,209,209,1) 31%, rgba(254,254,254,1) 56%, rgba(254,254,254,1) 100%);
+background: linear-gradient(135deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 8%, rgba(209,209,209,1) 31%, rgba(254,254,254,1) 56%, rgba(254,254,254,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 );
+}
+
+#title {
+  border: 5px black;
+  border-style: double none double none;
+  margin: -19% 0% 0% 0%;
+  padding: -80%;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 230%;
+}
+
+#subtitle {
+  float: right;
+  margin: -25% 0% 0% 0%;
+}
+
+#subtitle h2 {
+  margin: 0%;
+  float: right;
+  font-family:'Love Ya Like A Sister', cursive;
+  font-size: 270%;
+}
+
+.socialImg {
+  height: 24%;
+  width: 24%;
+  border-radius: 60%;
+}
+
+#socialImgs {
+  margin: -55% 0% 0% 0%;
+}
+
+
+/*Section 2*/
+
+#backgroundTwo {
+  background: rgba(241,231,103,1);
+background: -moz-linear-gradient(top, rgba(241,231,103,1) 22%, rgba(241,231,103,1) 35%, rgba(254,182,69,1) 57%, rgba(254,182,69,1) 79%);
+background: -webkit-gradient(left top, left bottom, color-stop(22%, rgba(241,231,103,1)), color-stop(35%, rgba(241,231,103,1)), color-stop(57%, rgba(254,182,69,1)), color-stop(79%, rgba(254,182,69,1)));
+background: -webkit-linear-gradient(top, rgba(241,231,103,1) 22%, rgba(241,231,103,1) 35%, rgba(254,182,69,1) 57%, rgba(254,182,69,1) 79%);
+background: -o-linear-gradient(top, rgba(241,231,103,1) 22%, rgba(241,231,103,1) 35%, rgba(254,182,69,1) 57%, rgba(254,182,69,1) 79%);
+background: -ms-linear-gradient(top, rgba(241,231,103,1) 22%, rgba(241,231,103,1) 35%, rgba(254,182,69,1) 57%, rgba(254,182,69,1) 79%);
+background: linear-gradient(to bottom, rgba(241,231,103,1) 22%, rgba(241,231,103,1) 35%, rgba(254,182,69,1) 57%, rgba(254,182,69,1) 79%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=0 );
+}
+
+#about {
+  margin: -55% 0% 0% 0%;
+}
+
+#about h2 {
+  font-family:'Love Ya Like A Sister', cursive;
+  font-size: 400%;
+}
+
+#about p {
+  font-family:'Reenie Beanie', cursive;
+  font-size: 160%;
+  font-weight: bold;
+  text-align: center;
+}
+
+#about ul {
+  font-family:'Reenie Beanie', cursive;
+  font-size: 160%;
+  font-weight: bold;
+  margin: 0% 0% 0% 30%;
+}
+
+#profilePic {
+  margin: -50% 0% 0% 0%;
+  float: right;
+}
+
+#profilePic img{
+  height: 90%;
+  width: 90%;
+}
+
+
+/*Section 3*/
+
+#backgroundThree {
+  background: rgba(254,254,254,1);
+background: -moz-linear-gradient(-45deg, rgba(254,254,254,1) 0%, rgba(254,254,254,1) 44%, rgba(209,209,209,1) 69%, rgba(219,219,219,1) 92%, rgba(226,226,226,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(254,254,254,1)), color-stop(44%, rgba(254,254,254,1)), color-stop(69%, rgba(209,209,209,1)), color-stop(92%, rgba(219,219,219,1)), color-stop(100%, rgba(226,226,226,1)));
+background: -webkit-linear-gradient(-45deg, rgba(254,254,254,1) 0%, rgba(254,254,254,1) 44%, rgba(209,209,209,1) 69%, rgba(219,219,219,1) 92%, rgba(226,226,226,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(254,254,254,1) 0%, rgba(254,254,254,1) 44%, rgba(209,209,209,1) 69%, rgba(219,219,219,1) 92%, rgba(226,226,226,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(254,254,254,1) 0%, rgba(254,254,254,1) 44%, rgba(209,209,209,1) 69%, rgba(219,219,219,1) 92%, rgba(226,226,226,1) 100%);
+background: linear-gradient(135deg, rgba(254,254,254,1) 0%, rgba(254,254,254,1) 44%, rgba(209,209,209,1) 69%, rgba(219,219,219,1) 92%, rgba(226,226,226,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e2e2e2', GradientType=1 );
+}
+
+#portfolio {
+  margin: -55% 0% 0% 0%;
+}
+
+#portfolio h2 {
+  font-family:'Love Ya Like A Sister', cursive;
+  font-size: 400%;
+  text-align: center;
+  border: 5px black;
+  border-style: double none double none;
+  margin: 0% 0% 0% -2%;
+}
+
+.folioImgs {
+  margin-top: 5%;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+/*Section 4*/
+
+#backgroundFour {
+  background: rgba(254,182,69,1);
+background: -moz-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: -webkit-gradient(left top, left bottom, color-stop(21%, rgba(254,182,69,1)), color-stop(43%, rgba(254,182,69,1)), color-stop(65%, rgba(241,231,103,1)), color-stop(78%, rgba(241,231,103,1)));
+background: -webkit-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: -o-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: -ms-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: linear-gradient(to bottom, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feb645', endColorstr='#f1e767', GradientType=0 );
+}
+
+#contactForm {
+  background: rgba(254,182,69,1);
+background: -moz-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: -webkit-gradient(left top, left bottom, color-stop(21%, rgba(254,182,69,1)), color-stop(43%, rgba(254,182,69,1)), color-stop(65%, rgba(241,231,103,1)), color-stop(78%, rgba(241,231,103,1)));
+background: -webkit-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: -o-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: -ms-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: linear-gradient(to bottom, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feb645', endColorstr='#f1e767', GradientType=0 );
+  margin: -60% 0% 0% 0%;
+  float: right;
+}
+
+#contactForm h2 {
+  font-family:'Love Ya Like A Sister', cursive;
+  font-size: 280%;
+  text-align: center;
+  margin: 10% 0% 0% 0%;
+}
+
+label {
+  font-family:'Reenie Beanie', cursive;
+  font-size: 180%;
+  font-weight: bold;
+}
+
+#submitButton {
+  background: rgba(254,182,69,1);
+background: -moz-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: -webkit-gradient(left top, left bottom, color-stop(21%, rgba(254,182,69,1)), color-stop(43%, rgba(254,182,69,1)), color-stop(65%, rgba(241,231,103,1)), color-stop(78%, rgba(241,231,103,1)));
+background: -webkit-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: -o-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: -ms-linear-gradient(top, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+background: linear-gradient(to bottom, rgba(254,182,69,1) 21%, rgba(254,182,69,1) 43%, rgba(241,231,103,1) 65%, rgba(241,231,103,1) 78%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feb645', endColorstr='#f1e767', GradientType=0 );
+  border: 5px double black;
+  margin: -10% 0% 0% 0%;
+}
+
+#submitButton h1{
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 250%;
+}
+
+#contactSocial {
+  margin: -50% 0% 0% 0%;
+}
+
+#contactSocial img {
+  height: 40%;
+  width: 40%;
+  float: none;
+  margin: 0 auto;
+}
