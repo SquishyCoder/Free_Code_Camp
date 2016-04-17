@@ -1,0 +1,272 @@
+/*General*/
+
+@media (min-width: 768px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #main {
+    background-color: #C8C8C8;
+  }
+
+  .shadow {
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    margin: 0% 2% 5% 0%;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .book {
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    margin: 0% 2% 5% 0%;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .bookImg {
+    margin-top: 5em;
+  }
+
+  .bookInfo ul {
+    list-style: none;
+    margin: 0em 0em 3em 0em;
+  }
+
+  .bookInfo ul li ul li{
+    margin-top: 1em;
+  }
+
+  .bookInfo p {
+    margin-top: -2em;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 70%;
+  }
+
+  #back {
+    background-color: #C8C8C8;
+  }
+
+  #main {
+    border: 1px solid black;
+    background-color: #FFFFFF;
+    margin-bottom: 5%;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .bookImg blockquote {
+    margin-top: -18%;
+    font-size: 0.75em;
+  }
+
+  .bookImg blockquote p{
+    margin-top: -5%;
+  }
+
+  .bookImg blockquote footer{
+    display: none;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  html{
+    font-size: 80%;
+  }
+
+  .bookImg blockquote {
+    margin-top: -10%;
+    font-size: 0.79em;
+  }
+}
+
+@media (min-width: 1920px) {
+  html{
+    font-size: 135%;
+  }
+
+  .bookImg blockquote {
+    margin-top: 0%;
+  }
+}
+
+
+
+body {
+  font-family: Georgia;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1em;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-style: oblique;
+  line-height: 1.333333333333333em;
+  margin-bottom: .6666666666666667em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+a:link {
+  color: #006600;
+}
+
+a:hover {
+  color: #009900;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #00CC00;
+  text-decoration: none;
+}
+
+ul {
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+
+ul li {
+  margin-top: 1em;
+}
+
+ul li ul {
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+ol {
+  font-size: 0.9em;
+}
+
+span {
+  font-weight: bold;
+}
+
+.row-centered {
+  text-align:center;
+}
+
+.col-centered {
+  display:inline-block;
+  float:none;
+  text-align:left;
+  margin-right: -2px;
+}
+
+#author {
+  margin-top: -0.1em;
+}
+
+#prizes ul {
+  margin-left: 10%;
+}
+
+.book {
+  margin-top: 10em;
+}
+
+.bookInfo p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.bookImg {
+  text-align: center;
+}
+
+.bookImg img {
+  width: 100%;
+}
+
+.bookImg figure {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+figcaption {
+  background: rgba(0,0,0,0.8);
+	color: white;
+	height: 110%;
+  width: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+  -webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	transition: all 300ms;
+	-webkit-transition-delay: 100ms;
+	-moz-transition-delay: 100ms;
+	transition-delay: 100ms;
+	z-index: 100;
+}
+
+blockquote {
+	font-size: 1.5em;
+  font-style: italic;
+	position: relative;
+	width: 100%;
+  -webkit-transition: all 300ms ease-out;
+	-moz-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+	vertical-align: middle;
+}
+
+blockquote footer {
+  font-size: 1em;
+}
+
+blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 30em;
+    opacity: 0.5;
+    position: absolute;
+    left: 0.2em;
+    color: #7a7a7a;
+}
+
+.bookImg:hover figcaption {
+  opacity: 1;
+}
+
+.bookImg:hover figcaption blockquote{
+  -moz-transform: translateY(40px);
+	-webkit-transform: translateY(40px);
+	transform: translateY(40px);
+}
