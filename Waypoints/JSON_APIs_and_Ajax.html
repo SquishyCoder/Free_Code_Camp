@@ -1,0 +1,63 @@
+<script>
+  $(document).ready(function() {
+    $("#getMessage").on("click", function(){ // trigger cLick Events with jQuery
+
+// API: Application Programming Interfaces -- tools that computers use to communicate with one another.
+// Web APIs tranfer data using JSON
+    $.getJSON("/json/cats.json", function(json) {
+        $(".message").html(JSON.stringify(json));
+      }); // Ajax function replacing current text on html upon click with raw JSON output
+
+// Convert JSON data to HTML
+    var html = "";
+    json.forEach(function(val) { // method to loop through data
+        var keys = Object.keys(val);
+        html += "<div class = 'cat'>";
+        keys.forEach(function(key) {
+            html += "<b>" + key + "</b>: " + val[key] + "<br>";
+            });
+        html += "</div><br>";
+        });
+
+// Prefilter JSON: preventing a photo from rendering
+    json = json.filter(function(val) { // filters out the cat that has id key value of 1
+      return (val.id !== 1);
+    });
+
+// Rendering images from data sources
+    json.forEach(function(val) {
+        html += "<div class = 'cat'>";
+        html += "<img src = '" + val.imageLink + "'>";
+        html += "</div>";
+        });
+
+    $(".message").html("Here is the message"); // change text with click event
+      });
+
+// Get geolocation data
+    if (navigator.geolocation) { // navigator will get user's current longitude & latitude
+      navigator.geolocation.getCurrentPosition(function(position) {
+        $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
+      });
+    }
+  });
+</script>
+
+
+<div class="container-fluid">
+  <div class = "row text-center">
+    <h2>Cat Photo Finder</h2>
+  </div>
+  <div class = "row text-center">
+    <div class = "col-xs-12 well message">
+      The message will go here
+    </div>
+  </div>
+  <div class = "row text-center">
+    <div class = "col-xs-12">
+      <button id = "getMessage" class = "btn btn-primary">
+        Get Message
+      </button>
+    </div>
+  </div>
+</div>
