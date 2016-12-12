@@ -8,3 +8,7 @@ Build Your Own Portfolio -- http://codepen.io/SquishyCoder/full/xVWWrQ
 Build A Tribute Page -- http://codepen.io/SquishyCoder/full/WwJEMy
 
 Build A Random Quote Machine -- http://codepen.io/SquishyCoder/full/EKdmRB/
+
+Weather App -- http://codepen.io/SquishyCoder/full/xOZWbo
+
+Build A Wikipedia Viewer -- http://codepen.io/SquishyCoder/full/ZBMVrx
