@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Wikipedia Viewer">
+
+    <title>Wiki View</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" media="screen,projection">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700,900" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="Wikipedia.js"></script>
+
+</head>
+
+<style>
+body {
+  background: #eceff1 url("https://upload.wikimedia.org/wikipedia/commons/d/dd/Wikipedia_logo_silver_wt.png") no-repeat right top;
+  font-family: "Maven Pro", sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 800%;
+}
+
+input {
+  font-size: 500%;
+}
+
+.btn-flat, ul {
+  font-size: 150%;
+}
+
+.btn-flat {
+  font-weight: 700;
+}
+
+footer {
+  font-family: 'Bad Script', cursive;
+  font-size: 150%;
+}
+
+a {
+  color: #000000;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+}
+</style>
+
+<body>
+  <div class="container" id="title">
+    <div class="row">
+      <div class="col s12">
+        <h1 class="header black-text center">Wiki View</h1>
+        <div class="input-field col s12 m6 offset-m3">
+          <input placeholder="Query through Wikipedia" type="search" id="input">
+        </div>
+
+        <div class="col s12 center">
+          <a class="waves-effect waves-black btn-flat" id="search">SEARCH</a>
+          <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="waves-effect waves-black btn-flat">RANDOM</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="results">
+    <div class="col s12 m6 offset-m3">
+      <ul class="collapsible popout staggered" data-collapsible="accordion">
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer-copyright center">
+      <div class="row" id="creator">
+          <a href="https://github.com/SquishyCoder" target="_blank"><img id="logo" src="https://raw.githubusercontent.com/SquishyCoder/Free_Code_Camp/master/Ziplines/images/GlassesOctopus2.png" alt="SquishyCoder logo">by SquishyCoder</a>
+      </div>
+  </footer>
+</body>
+
+</html>

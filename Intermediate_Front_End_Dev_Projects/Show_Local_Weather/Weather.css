@@ -1,0 +1,238 @@
+@media (max-width: 480px) {
+  #send-button {
+    margin-left: 40%;
+  }
+
+  #fahrenheit {
+    margin-left: -1150% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  #week {
+    margin-top: 0% !important;
+  }
+
+  #week .card {
+    height: 600px;
+  }
+
+  #day-zero {
+    margin-left: 0% !important;
+    margin-top: 10% !important;
+  }
+
+  #day-one {
+    margin-top: 50% !important;
+  }
+
+  #day-two, #day-four {
+    margin-right: 0% !important;
+  }
+
+  #day-three, #day-four {
+    margin-top: 0% !important;
+  }
+
+  #day-four {
+    padding-bottom: 5%;
+  }
+
+  #temp-buttons br {
+    display: none;
+  }
+
+  #temp-buttons {
+    margin-top: -1% !important;
+  }
+
+  #fahrenheit {
+    margin-left: -1250%;
+  }
+
+  #celcius {
+    margin-top: -0.5%;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1200px) {
+  #week .high, #week .low {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  #week {
+    margin-top: -35% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  #day-zero .high, #day-zero .low {
+    margin-top: 20%;
+  }
+
+  #day-two, #day-four {
+    margin-right: 10%;
+  }
+
+  #day-three, #day-four {
+    margin-top: -1%;
+  }
+
+  #week .wpic {
+    height: 100px;
+    margin-top: -25%;
+  }
+
+  #temp-buttons {
+    margin-top: 19%;
+    margin-left: -22%;
+  }
+
+  #day-zero .wpic {
+    height: 200px;
+  }
+
+  #week h1 {
+    margin-top: -3%;
+  }
+}
+
+
+p {
+  display: inline;
+  margin-top: 0%;
+}
+
+#title {
+  font-family: "Vast Shadow", cursive;
+  margin-top: 20%;
+  position: relative;
+}
+
+#city {
+  font-family: "Vast Shadow", cursive;
+}
+
+#send-button i {
+  color: #212121;
+}
+
+::-webkit-input-placeholder {
+   color: #212121;
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #212121;
+  text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #212121;
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  color: #212121;
+  text-align: center;
+}
+
+.staggered {
+  font-family: "Josefin Slab", serif;
+}
+
+li {
+  display:none;
+  opacity: 0;
+}
+
+#week {
+  display: inline;
+  margin-top: -30%;
+}
+
+.high, .low {
+  font-size: 200%;
+}
+
+#day-zero {
+  margin-top: -4%;
+  margin-left: -60%;
+}
+
+#day-zero .card {
+  height: 800px;
+}
+
+#day-zero h1 {
+  font-size: 900%;
+}
+
+.wpic {
+  height: 200px;
+}
+
+.card-front .card-action {
+  background-color: #212121 !important;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.card-back .card-action {
+  background-color: #FFFFFF !important;
+  font-weight: bold;
+}
+
+
+/* Card Flip Effect */
+.flip {
+  position: relative;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-front,
+.card-back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card-back {
+  background-color: #1e1e1e;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect-click.flipped .card-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect-click.flipped .card-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+
+footer {
+  font-family: 'Bad Script', cursive;
+  font-size: 150%;
+}
+
+#logo {
+  height: 50px;
+  margin-bottom: -0.5%;
+}

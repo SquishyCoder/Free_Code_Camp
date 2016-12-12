@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Weather Application">
+
+    <title>Weather Cards</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.min.css">
+    <link rel="stylesheet" href="Weather.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:700|Vast+Shadow" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+</head>
+
+<body class="teal accent-2">
+    <div class="container" id="title">
+        <div class="row">
+
+            <div class="col s12 center">
+                <div class="row">
+                    <h1 class="header black-text center">Weather Cards</h1>
+                    <h5 class="header center" id="city"></h5>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="col s12 m6 offset-m5">
+                <a class="left" id="send-button" onclick="Materialize.showStaggeredList('.staggered')"><i class="medium material-icons">send</i></a>
+            </div>
+
+            <div class="col s12 m6 offset-m3">
+                <div class="row">
+                    <form>
+                        <div class="input-field col s12">
+                            <i class="material-icons">location_on</i>
+                            <input placeholder="City, Country i.e. New York, US" id="search" type="search">
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+<!-- Start of staggered -->
+    <ul class="staggered">
+        <li>
+
+            <div class="cards">
+                <div class="row">
+
+                    <div class="col s12 l4" id="day-zero">
+                        <div class="card large flip effect-click">
+                            <div class="card-front">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h5 class="center day"></h5>
+                                        <h1 class="center"></h1>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+
+                                <div class="row">
+                                    <div class="col s12 center">
+                                        <img class="wpic" border="0" />
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <p class="description"></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col s6 center">
+                                        <p class="high"></p>
+                                    </div>
+                                    <div class="col s6 center">
+                                        <p class="low"></p>
+                                    </div>
+                                </div>
+
+                                <div class="card-action center">
+                                    <p>FLIP ME</p>
+                                </div>
+                            </div>
+
+                            <div class="card-back">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h5 class="center day white-text"></h5>
+                                        <h1 class="center temp white-text"></h1>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+
+                                <div class="row">
+                                    <div class="col s12 center">
+                                        <img class="wpic" border="0" />
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <p class="description white-text"></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col s6 center">
+                                        <p class="high white-text"></p>
+                                    </div>
+                                    <div class="col s6 center">
+                                        <p class="low white-text"></p>
+                                    </div>
+                                </div>
+
+                                <div class="card-action center">
+                                    <p>FLIP ME</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s1" id="temp-buttons">
+                        <a class="btn-floating btn-large waves-effect waves-light white black-text" id="fahrenheit">F</a>
+                        <br>
+                        <br>
+                        <a class="btn-floating btn-large waves-effect waves-light grey darken-4" id="celcius">C</a>
+                    </div>
+
+                    <div class="col s12 l6 right container cards" id="week">
+                            <ul>
+                              <div class="row">
+                                <li>
+                                    <div class="col s12 l5 pull-l6 right" id="day-one">
+                                        <div class="card medium flip effect-click">
+                                            <div class="card-front white">
+                                                <div class="row">
+                                                    <div class="col s12">
+                                                        <h5 class="center day"></h5>
+                                                        <h1 class="center"></h1>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+
+                                                <div class="row">
+                                                    <div class="col s12 center">
+                                                        <img class="wpic" border="0" />
+                                                        <br>
+                                                        <br>
+                                                        <p class="description"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s6 center">
+                                                        <p class="high"></p>
+                                                    </div>
+                                                    <div class="col s6 center">
+                                                        <p class="low"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-action center">
+                                                    <p>FLIP ME</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-back">
+                                                <div class="row">
+                                                    <div class="col s12">
+                                                        <h5 class="center day white-text"></h5>
+                                                        <h1 class="center white-text"></h1>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+
+                                                <div class="row">
+                                                    <div class="col s12 center">
+                                                        <img class="wpic" border="0" />
+                                                        <br>
+                                                        <br>
+                                                        <p class="description white-text"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s6 center">
+                                                        <p class="high white-text"></p>
+                                                    </div>
+                                                    <div class="col s6 center">
+                                                        <p class="low white-text"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-action center">
+                                                    <p>FLIP ME</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="col s12 l5 push-l6 right" id="day-two">
+                                        <div class="card medium flip effect-click">
+                                            <div class="card-front white">
+                                                <div class="row">
+                                                    <div class="col s12">
+                                                        <h5 class="center day"></h5>
+                                                        <h1 class="center"></h1>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+
+                                                <div class="row">
+                                                    <div class="col s12 center">
+                                                        <img class="wpic" border="0" />
+                                                        <br>
+                                                        <br>
+                                                        <p class="description"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s6 center">
+                                                        <p class="high"></p>
+                                                    </div>
+                                                    <div class="col s6 center">
+                                                        <p class="low"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-action center">
+                                                    <p>FLIP ME</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-back">
+                                                <div class="row">
+                                                    <div class="col s12">
+                                                        <h5 class="center day white-text"></h5>
+                                                        <h1 class="center white-text"></h1>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+
+                                                <div class="row">
+                                                    <div class="col s12 center">
+                                                        <img class="wpic" border="0" />
+                                                        <br>
+                                                        <br>
+                                                        <p class="description white-text"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s6 center">
+                                                        <p class="high white-text"></p>
+                                                    </div>
+                                                    <div class="col s6 center">
+                                                        <p class="low white-text"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-action center">
+                                                    <p>FLIP ME</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </li>
+                              </div>
+
+                                <div class="row">
+                                <li>
+                                    <div class="col s12 l5 pull-l6 right" id="day-three">
+                                        <div class="card medium flip effect-click">
+                                            <div class="card-front white">
+                                                <div class="row">
+                                                    <div class="col s12">
+                                                        <h5 class="center day"></h5>
+                                                        <h1 class="center"></h1>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+
+                                                <div class="row">
+                                                    <div class="col s12 center">
+                                                        <img class="wpic" border="0" />
+                                                        <br>
+                                                        <br>
+                                                        <p class="description"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s6 center">
+                                                        <p class="high"></p>
+                                                    </div>
+                                                    <div class="col s6 center">
+                                                        <p class="low"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-action center">
+                                                    <p>FLIP ME</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-back">
+                                                <div class="row">
+                                                    <div class="col s12">
+                                                        <h5 class="center day white-text"></h5>
+                                                        <h1 class="center white-text"></h1>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+
+                                                <div class="row">
+                                                    <div class="col s12 center">
+                                                        <img class="wpic" border="0" />
+                                                        <br>
+                                                        <br>
+                                                        <p class="description white-text"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s6 center">
+                                                        <p class="high white-text"></p>
+                                                    </div>
+                                                    <div class="col s6 center">
+                                                        <p class="low white-text"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-action center">
+                                                    <p>FLIP ME</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="col s12 l5 push-l6 right" id="day-four">
+                                        <div class="card medium flip effect-click">
+                                            <div class="card-front white">
+                                                <div class="row">
+                                                    <div class="col s12">
+                                                        <h5 class="center day"></h5>
+                                                        <h1 class="center"></h1>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+
+                                                <div class="row">
+                                                    <div class="col s12 center">
+                                                        <img class="wpic" border="0" />
+                                                        <br>
+                                                        <br>
+                                                        <p class="description"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s6 center">
+                                                        <p class="high"></p>
+                                                    </div>
+                                                    <div class="col s6 center">
+                                                        <p class="low"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-action center">
+                                                    <p>FLIP ME</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-back">
+                                                <div class="row">
+                                                    <div class="col s12">
+                                                        <h5 class="center day white-text"></h5>
+                                                        <h1 class="center white-text"></h1>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+
+                                                <div class="row">
+                                                    <div class="col s12 center">
+                                                        <img class="wpic" border="0" />
+                                                        <br>
+                                                        <br>
+                                                        <p class="description white-text"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s6 center">
+                                                        <p class="high white-text"></p>
+                                                    </div>
+                                                    <div class="col s6 center">
+                                                        <p class="low white-text"></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-action center">
+                                                    <p>FLIP ME</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </li>
+    </ul>
+    <!-- End of staggered -->
+
+
+    <footer class="footer-copyright center">
+        <div id="creator">
+            <a href="https://github.com/SquishyCoder" target="_blank"><img id="logo" src="https://raw.githubusercontent.com/SquishyCoder/Free_Code_Camp/master/Ziplines/images/GlassesOctopus2.png" alt="SquishyCoder logo"></a>
+            <p>by SquishyCoder</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="Weather.js"></script>
+</body>
+
+</html>

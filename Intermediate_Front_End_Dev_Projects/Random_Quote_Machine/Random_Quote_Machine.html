@@ -3,13 +3,11 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Random Quote Machine</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
 
     <link href='Random_Quote_Machine.css' rel='stylesheet' type='text/css'>
@@ -22,27 +20,28 @@
 </head>
 
 <body class="container-fluid">
+  <div class="back row row-centered">
+    <div id="main" class="col-xs-12 col-md-6 col-centered">
+      <blockquote class="blockquote-reverse">
+        <p id="blockq"></p>
+        <footer id="author"></footer>
+      </blockquote>
 
-    <div class="back row row-centered">
-        <div id="main" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-centered">
-          <blockquote class="blockquote-reverse">
-              <p id="blockq"></p>
-              <footer id="author"></footer>
-          </blockquote>
-          <button id="quote" type="button" class="btn btn-secondary-outline">Quote</button>
-          <a id="twitter" href=""><img src="https://g.twimg.com/dev/documentation/image/DTC_Services_1h_hero_bg.png" alt="twitter bird"></a>
-        </div>
+      <a href="" id="twitter"><i class="fa fa-twitter fa-3x fa-inverse"></i></a>
+      <button id="quote" type="button" class="btn btn-secondary-outline">Quote</button>
 
-        <div id="creator" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-centered">
-            <p>by SquishyCoder</p>
-            <a href="https://github.com/SquishyCoder" target="_blank"><img id="logo" src="https://raw.githubusercontent.com/SquishyCoder/Free_Code_Camp/master/Ziplines/images/GlassesOctopus2.png" alt="SquishyCoder logo"></a>
-        </div>
     </div>
 
-    <div id="notice">
-        <p id="forismatic">Fab quotes thanks to <a href="http://forismatic.com/en/api/">Forismatic</a>.</p>
-        <p id="backgroundhost">Backround image courtesy of <a href="http://backgroundhost.com/">BackgroundHost</a>.</p>
+    <div id="creator" class="col-xs-12 col-md-6 col-centered">
+      <p>by SquishyCoder</p>
+      <a href="https://github.com/SquishyCoder" target="_blank"><img id="logo" src="https://raw.githubusercontent.com/SquishyCoder/Free_Code_Camp/master/Ziplines/images/GlassesOctopus2.png" alt="SquishyCoder logo"></a>
     </div>
+  </div>
+
+  <div id="notice">
+    <p id="forismatic">Fab quotes thanks to <a href="http://forismatic.com/en/api/">Forismatic</a>.</p>
+    <p id="backgroundhost">Backround image courtesy of <a href="http://backgroundhost.com/">BackgroundHost</a>.</p>
+  </div>
 
     <script>
         $(document).ready(randomQ);
